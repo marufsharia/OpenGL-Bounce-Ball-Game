@@ -46,7 +46,8 @@
 //draw Bottom bar
  void DrawBottomBar()
 {
-    glColor3f(0.50,0.0,0.0);
+
+    glColor3ub(rand()%254+1, rand()%254+1, rand()%254+1);
     glBegin(GL_QUADS);
 	//Trapezoid
 	glVertex3f(-2.0, -2.70, 0.0);
@@ -60,6 +61,7 @@
  void DrawLeftTopBrickBar()
 {
 glColor3f(0.50,0.0,0.0);
+//glColor3ub(rand()%254+1, rand()%254+1, rand()%254+1);
     glBegin(GL_QUADS);
 	//Trapezoid
 	glVertex3f(-2.0, 1.00, 0.0);

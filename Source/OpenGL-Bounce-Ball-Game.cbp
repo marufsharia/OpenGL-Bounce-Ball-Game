@@ -32,6 +32,10 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="GlobalVariables.hpp" />
+		<Unit filename="LoadImage.hpp" />
+		<Unit filename="PlayGround.hpp" />
+		<Unit filename="header.h" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<code_completion />

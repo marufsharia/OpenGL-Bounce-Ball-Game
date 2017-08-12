@@ -1,10 +1,10 @@
 # depslib dependency file v1.0
-1502548049 source:g:\c++\opengl\aiub graphics project\final project\opengl-bounce-ball-game\source\main.cpp
+1502556802 source:g:\c++\opengl\aiub graphics project\final project\opengl-bounce-ball-game\source\main.cpp
 	"header.h"
 	"PlayGround.hpp"
 	"GlobalVariables.hpp"
 
-1502485118 g:\c++\opengl\aiub graphics project\final project\opengl-bounce-ball-game\source\header.h
+1502552411 g:\c++\opengl\aiub graphics project\final project\opengl-bounce-ball-game\source\header.h
 	<iostream>
 	<stdio.h>
 	<stdlib.h>
@@ -12,11 +12,12 @@
 	<time.h>
 	<string.h>
 	<math.h>
+	<MMSystem.h>
 	<conio.h>
 	<GL/gl.h>
 	<Gl/glut.h>
 
-1502547513 g:\c++\opengl\aiub graphics project\final project\opengl-bounce-ball-game\source\playground.hpp
+1502556845 g:\c++\opengl\aiub graphics project\final project\opengl-bounce-ball-game\source\playground.hpp
 	"header.h"
 
 1502547471 g:\c++\opengl\aiub graphics project\final project\opengl-bounce-ball-game\source\globalvariables.hpp

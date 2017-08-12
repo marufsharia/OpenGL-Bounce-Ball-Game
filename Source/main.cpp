@@ -8,6 +8,8 @@
 
 int WindowHeight = 850;
 int WindowWidth = 900;
+bool gameStart=false;
+
 
 /********************************************************************
 // KeyBoard Event For Letter and Special Key and other keys
@@ -18,10 +20,10 @@ void keyPress(int key, int x, int y)
 {
     if(key==GLUT_KEY_RIGHT)
     {
-      if(ballX<1.60)
-      {
-         ballX += 0.10f;
-      }
+        if(ballX<1.60)
+        {
+            ballX += 0.10f;
+        }
 
     }
 
@@ -29,7 +31,7 @@ void keyPress(int key, int x, int y)
     {
         if(ballX>-1.60)
         {
-             ballX  -= 0.10f;
+            ballX  -= 0.10f;
         }
 
     }
@@ -67,9 +69,11 @@ void Keyboard(unsigned char key, int x, int y)
     case 27:             // ESCAPE key
         exit (0);
         break;
-    case 13:             // ESCAPE key
+    case 13:
+        gameStart=true;          // ESCAPE key
         glutDisplayFunc(drawScene);
         glutTimerFunc(25, update, 0); //Add a timer
+        PlaySound("resource//bg1.wav", NULL, SND_ASYNC|SND_FILENAME|SND_LOOP);
         break;
     }
     glutPostRedisplay(); //Tell GLUT that the display has changed
@@ -126,6 +130,7 @@ void handleResize(int w, int h)
 void initRendering()
 {
     glEnable(GL_DEPTH_TEST);
+
 }
 
 
@@ -140,6 +145,7 @@ void drawIntro()
     glRotatef(-_cameraAngle, 0.0, 1.0, 0.0); //Rotate the camera
     glTranslatef(0.0, 0.0, -7.0);
 
+    glPointSize(2);
     //Intro goes here
     glPushMatrix(); //Save the current state of transformations
     glTranslatef(-1.0, 1.0, 1.0); //Move to the center of the triangle
@@ -148,7 +154,8 @@ void drawIntro()
     //top circle
     glPopMatrix(); //Undo the move to the center of the triangle
 
-    glColor3f(1,0,0);
+//    glColor3f(1,0,0);
+    glColor3ub(rand()%254+1, rand()%254+1, rand()%254+1);
     glPushMatrix(); //Save the current state of transformations
     glTranslatef(-1.0, 1.0, 1.0); //Move to the center of the triangle
     glRotatef(_angle, 0.0, 0.0, 1.0); //Rotate about the the vector (1, 2, 3)
@@ -166,12 +173,12 @@ void drawIntro()
     glPopMatrix(); //Undo the move to the center of the triangle
 
 
-    glColor3f(1,0,0);
+    glColor3ub(rand()%254+1, rand()%254+1, rand()%254+1);
     glPushMatrix(); //Save the current state of transformations
     glTranslatef(0.0, 1.0, 1.0); //Move to the center of the triangle
     glRotatef(_angle, 0.0, 0.0, 1.0); //Rotate about the the vector (1, 2, 3)
 
-    glBegin(GL_POINTS);
+    glBegin(GL_LINES);
     for(int i=0; i<200; i++)
     {
         float pi=3.1416;
@@ -183,7 +190,7 @@ void drawIntro()
     glEnd();
     glPopMatrix(); //Undo the move to the center of the triangle
 
-    glColor3f(1,0,0);
+    glColor3ub(rand()%254+1, rand()%254+1, rand()%254+1);
     glPushMatrix(); //Save the current state of transformations
     glTranslatef(1.0, 1.0, 1.0); //Move to the center of the triangle
     glRotatef(_angle, 0.0, 0.0, 1.0); //Rotate about the the vector (1, 2, 3)
@@ -202,15 +209,17 @@ void drawIntro()
 
 //Display Menu
     glPushMatrix(); //Save the current state of transformations
-        glTranslatef(0.0, 0.0, 1.0); //Move to the center of the triangle
-        glRotatef(_angle, 0.0, 0.0, 1.0); //Rotate about the the vector (1, 2, 3)
-    glColor3f(1,0,1);
-        char string1[128];
-        sprintf(string1, "Press Enter To Start");
-        printtext(400,450,string1);
-        char string2[128];
-        sprintf(string2, "Press ESC To Exit");
-        printtext(400,400,string2);
+    glTranslatef(0.0, 0.0, 1.0); //Move to the center of the triangle
+    glRotatef(_angle, 0.0, 0.0, 1.0); //Rotate about the the vector (1, 2, 3)
+    //glColor3f(1,0,1);
+    glColor3ub(rand()%254+1, rand()%254+1, rand()%254+1);
+    char string1[128];
+    sprintf(string1, "Press Enter To Start");
+    printtext(400,450,string1);
+    glColor3ub(rand()%254+1, rand()%254+1, rand()%254+1);
+    char string2[128];
+    sprintf(string2, "Press ESC To Exit");
+    printtext(400,400,string2);
     glPopMatrix(); //Undo the move to the center of the triangle
 
 
@@ -218,7 +227,7 @@ void drawIntro()
     //bottom circle
     glPopMatrix(); //Undo the move to the center of the triangle
 
-    glColor3f(1,0,0);
+    glColor3ub(rand()%254+1, rand()%254+1, rand()%254+1);
     glPushMatrix(); //Save the current state of transformations
     glTranslatef(-1.0, -1.0, 1.0); //Move to the center of the triangle
     glRotatef(-_angle, 0.0, 0.0, 1.0); //Rotate about the the vector (1, 2, 3)
@@ -236,12 +245,12 @@ void drawIntro()
     glPopMatrix(); //Undo the move to the center of the triangle
 
 
-    glColor3f(1,0,0);
+    glColor3ub(rand()%254+1, rand()%254+1, rand()%254+1);
     glPushMatrix(); //Save the current state of transformations
     glTranslatef(0.0, -1.0, 1.0); //Move to the center of the triangle
     glRotatef(-_angle, 0.0, 0.0, 1.0); //Rotate about the the vector (1, 2, 3)
 
-    glBegin(GL_POINTS);
+    glBegin(GL_LINES);
     for(int i=0; i<200; i++)
     {
         float pi=3.1416;
@@ -253,7 +262,7 @@ void drawIntro()
     glEnd();
     glPopMatrix(); //Undo the move to the center of the triangle
 
-    glColor3f(1,0,0);
+    glColor3ub(rand()%254+1, rand()%254+1, rand()%254+1);
     glPushMatrix(); //Save the current state of transformations
     glTranslatef(1.0, -1.0, 1.0); //Move to the center of the triangle
     glRotatef(-_angle, 0.0, 0.0, 1.0); //Rotate about the the vector (1, 2, 3)
@@ -273,6 +282,7 @@ void drawIntro()
 
     //Intro End
     glutSwapBuffers();
+
 }
 
 
@@ -291,10 +301,11 @@ void drawScene()
 ////////////////////////////////////////////////////////////////
 //Draw ball
 ////////////////////////////////////////////////////////////////
-    glColor3f(1,0,0);
+
     glPushMatrix(); //Save the current state of transformations
     glTranslatef(0.0, 1.78, 1.0); //Move to the center of the triangle
     //glRotatef(_angle, 0.0, 0.0, 1.0); //Rotate about the the vector (1, 2, 3)
+        glColor3f(1,0,0);
 
     glBegin(GL_POLYGON);
     for(int i=0; i<200; i++)
@@ -325,6 +336,7 @@ void drawScene()
 
     /* render*/
     glutSwapBuffers();
+
 }
 /***************************************************************
 //Update angle,speed and other stuff
@@ -343,31 +355,42 @@ void update(int value)
         _ang_tri -= 360;
     }
 
+    if(gameStart)
+    {
+        //For ball speed
+        if(ballX>1.60)
+        {
+            ballX=1.60;
+        }
+        if(ballX<-1.60)
+        {
+            ballX=-1.60;
+        }
+        //ballY
 
-    //For ball speed
-    if(ballX>1.60)
-    {
-        ballX=1.60;
-    }
-    if(ballX<-1.60)
-    {
-        ballX=-1.60;
-    }
-    //ballY
+        /*if(ballY>0.0)
+        {
+            cout<<"game Over hit top bar"<<endl;
+            ballY=0.50;
+        }*/
+        if(ballY<-4.00)
+        {
 
-    /*if(ballY>0.0)
-    {
-        cout<<"game Over hit top bar"<<endl;
-        ballY=0.50;
-    }*/
-    if(ballY<-4.00)
-    {
-        cout<<"game Over hit Bottom bar"<<endl;
-        // glutDisplayFunc(drawIntro);
-        ballY+=4.00;
-    }
-    ballY-=0.01;
+            cout<<"game Over hit Bottom bar"<<endl;
+            PlaySound("resource//collide.wav", NULL, SND_ASYNC|SND_FILENAME);
+            // glutDisplayFunc(drawIntro);
+            ballY+=4.00;
 
+            Sleep(300);
+
+            glutDisplayFunc(drawScene);
+            PlaySound("resource//bg1.wav", NULL, SND_ASYNC|SND_FILENAME|SND_LOOP);
+
+        }
+
+        ballY-=0.01;
+
+    }
     glutPostRedisplay(); //Tell GLUT that the display has changed
 
     //Tell GLUT to call update again in 25 milliseconds
@@ -387,7 +410,7 @@ int main(int argc, char** argv)
     glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB | GLUT_DEPTH);
 
     glutInitWindowSize(900, 850);
-
+    PlaySound("resource//bg.wav", NULL, SND_ASYNC|SND_FILENAME|SND_LOOP);
     //Create the window
     glutCreateWindow("Bounce Ball Game");
     initRendering();
@@ -400,7 +423,7 @@ int main(int argc, char** argv)
     glutKeyboardFunc (Keyboard);
     glutSpecialFunc(keyPress);
     glutFullScreen();/* Go to full screen */
-   glutTimerFunc(25, update, 0); //Add a timer
+    glutTimerFunc(25, update, 0); //Add a timer
     glutMainLoop();
     return 0;
 }

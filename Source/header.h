@@ -11,6 +11,7 @@
 #include<time.h>
 #include<string.h>
 #include<math.h>
+#include<MMSystem.h>
 #include<conio.h>
 #include<GL/gl.h>
 #include<Gl/glut.h>
