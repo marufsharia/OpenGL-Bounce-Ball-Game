@@ -1,0 +1,42 @@
+# depslib dependency file v1.0
+1502652460 source:f:\c++\opengl\aiub graphics project\final project\opengl-bounce-ball-game\source\main.cpp
+	"header.h"
+	"PlayGround.hpp"
+	"GlobalVariables.hpp"
+	"TextDisplay.hpp"
+	"SplashScreen.hpp"
+	"GameScreenLevel1.hpp"
+	"KeyBoardEvents.hpp"
+	"Timer.hpp"
+	"GlutConfig.hpp"
+
+1502651782 f:\c++\opengl\aiub graphics project\final project\opengl-bounce-ball-game\source\header.h
+	<iostream>
+	<stdio.h>
+	<stdlib.h>
+	<windows.h>
+	<time.h>
+	<string.h>
+	<math.h>
+	<conio.h>
+	<GL/gl.h>
+	<Gl/glut.h>
+
+1502652548 f:\c++\opengl\aiub graphics project\final project\opengl-bounce-ball-game\source\playground.hpp
+
+1502652401 f:\c++\opengl\aiub graphics project\final project\opengl-bounce-ball-game\source\globalvariables.hpp
+
+1502651782 source:f:\c++\opengl\aiub graphics project\final project\opengl-bounce-ball-game\source\scorebar.cpp
+
+1502652299 f:\c++\opengl\aiub graphics project\final project\opengl-bounce-ball-game\source\textdisplay.hpp
+
+1502652527 f:\c++\opengl\aiub graphics project\final project\opengl-bounce-ball-game\source\splashscreen.hpp
+
+1502652372 f:\c++\opengl\aiub graphics project\final project\opengl-bounce-ball-game\source\gamescreenlevel1.hpp
+
+1502652427 f:\c++\opengl\aiub graphics project\final project\opengl-bounce-ball-game\source\keyboardevents.hpp
+
+1502652490 f:\c++\opengl\aiub graphics project\final project\opengl-bounce-ball-game\source\timer.hpp
+
+1502652249 f:\c++\opengl\aiub graphics project\final project\opengl-bounce-ball-game\source\glutconfig.hpp
+

@@ -2,7 +2,6 @@
 // This is simple Bounce Ball Game
 //  This is draw background and main playing space
 *****************************************************************************/
-#include"header.h"
  void DrawPlayGround()
 {
     glColor4f(1.0,1.0,1.0,0.08);
@@ -10,8 +9,8 @@
 	//Trapezoid
 	glVertex3f(-2.0, -10.0, 0.0);
 	glVertex3f(2.0, -10.0, 0.0);
-	glVertex3f(2.0, 10.0, 0.0);
-	glVertex3f(-2.0, 10.0, 0.0);
+	glVertex3f(2.0, 2.20, 0.0);
+	glVertex3f(-2.0, 2.20, 0.0);
 
 	glEnd();
 
@@ -20,7 +19,7 @@
 //draw Score bar
  void DrawScoreBar()
 {
-    glColor4f(0.30,0.70,0.50,0.02);
+    glColor4f(0.30,0.70,0.50,0.90);
     glBegin(GL_QUADS);
 	glVertex3f(2.0, 2.90, 0.0);
 	glVertex3f(-2.0, 2.90, 0.0);
@@ -46,7 +45,8 @@
 //draw Bottom bar
  void DrawBottomBar()
 {
-    glColor3f(0.50,0.0,0.0);
+
+    glColor3ub(rand()%254+1, rand()%254+1, rand()%254+1);
     glBegin(GL_QUADS);
 	//Trapezoid
 	glVertex3f(-2.0, -2.70, 0.0);
@@ -56,9 +56,63 @@
 	glEnd();
 }
 
+//Draw Bar left Top Brick bar
+ void DrawLeftTopBrickBar()
+{
+glColor3f(0.50,0.0,0.0);
+//glColor3ub(rand()%254+1, rand()%254+1, rand()%254+1);
+    glBegin(GL_QUADS);
+	//Trapezoid
+	glVertex3f(-2.0, 1.00, 0.0);
+	glVertex3f(-1.0,  1.00, 0.0);
+	glVertex3f(-1.0, 1.20, 0.0);
+	glVertex3f(-2.0, 1.20, 0.0);
+	glEnd();
 
 
+}
 
+//Draw Bar left Top Brick bar
+ void DrawLeftBottomBrickBar()
+{
+glColor3f(0.50,0.0,0.0);
+    glBegin(GL_QUADS);
+	//Trapezoid
+	glVertex3f(-2.0, -1.00, 0.0);
+	glVertex3f(-1.0,  -1.00, 0.0);
+	glVertex3f(-1.0, -1.20, 0.0);
+	glVertex3f(-2.0, -1.20, 0.0);
+	glEnd();
+
+}
+
+//Draw Bar right Top Brick bar
+ void DrawRightTopBrickBar()
+{
+glColor3f(0.50,0.0,0.0);
+    glBegin(GL_QUADS);
+	//Trapezoid
+	glVertex3f(2.0, 0.60, 0.0);
+	glVertex3f(1.0,  0.60, 0.0);
+	glVertex3f(1.0, 0.80, 0.0);
+	glVertex3f(2.0, 0.80, 0.0);
+	glEnd();
+
+}
+
+//Draw Bar left Top Brick bar
+ void DrawRightBottomBrickBar()
+{
+glColor3f(0.50,0.0,0.0);
+    glBegin(GL_QUADS);
+	//Trapezoid
+	glVertex3f(2.0, -1.80, 0.0);
+	glVertex3f(1.0,  -1.80, 0.0);
+	glVertex3f(1.0, -2.00, 0.0);
+	glVertex3f(2.0, -2.00, 0.0);
+	glEnd();
+
+}
 
 
 
