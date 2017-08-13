@@ -10,7 +10,7 @@ void keyPress(int key, int x, int y)
     {
         if(ballX<1.60)
         {
-            ballX += 0.50f;
+            ballX += 1.0f;
         }
 
     }
@@ -19,7 +19,7 @@ void keyPress(int key, int x, int y)
     {
         if(ballX>-1.60)
         {
-            ballX  -= 0.50f;
+            ballX  -= 1.0f;
         }
 
     }

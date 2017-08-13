@@ -16,11 +16,12 @@ bool gameStart=false;
 bool gameStop=true;
 float leftTopBrickBar;
 char score[]="Score : ";
-//char life[]="Life: 4";
 char *life="Life : ";
 int l=4;
-
 //function
 void drawScene(void);
 void update(int value);
 void drawIntro(void);
+void ShowStars(void);
+void ShowStar(int);
+int winner(char a);

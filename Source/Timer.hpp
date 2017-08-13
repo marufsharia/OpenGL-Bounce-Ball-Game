@@ -28,7 +28,7 @@ void update(int value)
         }
         //ballY
 
-        /*if(ballY>0.0)
+       /* if(ballY>0.0)
         {
             cout<<"game Over hit top bar"<<endl;
             ballY=0.50;
@@ -48,11 +48,38 @@ void update(int value)
         }
 
         ballY-=0.01;
+            LeftBrickBarY1+=0.01f;
+            if (LeftBrickBarY1 > 1.30)
+            {
+                LeftBrickBarY1 -= 4.50;
+            }
+
+            //2nd left brick
+            LeftBrickBarY2+=0.01;
+            if (LeftBrickBarY2 > 3.50)
+            {
+                LeftBrickBarY2 -= 5.50;
+            }
+
+            //1st right brick
+            RightBrickBarY1+=0.01;
+            if (RightBrickBarY1 > 1.50)
+            {
+                RightBrickBarY1 -= 4.50;
+            }
+
+            //1st right brick
+            RightBrickBarY2+=0.01;
+            if (RightBrickBarY2 > 3.50)
+            {
+                RightBrickBarY2 -= 5.50;
+            }
+
 
     }
     glutPostRedisplay(); //Tell GLUT that the display has changed
 
     //Tell GLUT to call update again in 25 milliseconds
-    glutTimerFunc(25, update, 0);
+    glutTimerFunc(10, update, 0);
 }
 

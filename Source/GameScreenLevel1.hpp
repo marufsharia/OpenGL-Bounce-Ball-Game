@@ -4,13 +4,14 @@
 *****************************************************************/
 void drawScene()
 {
+
+
+
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
     glMatrixMode(GL_MODELVIEW); //Switch to the drawing perspective
     glLoadIdentity(); //Reset the drawing perspective
     //glRotatef(-_cameraAngle, 0.0, 1.0, 0.0); //Rotate the camera
     glTranslatef(0.0, 0.0, -7.0); //Move forward 5 units
-
-
 ////////////////////////////////////////////////////////////////
 //Draw ball
 ////////////////////////////////////////////////////////////////
@@ -28,6 +29,8 @@ void drawScene()
         float x = ball_Radius * cos(A);
         float y = ball_Radius * sin(A);
         glVertex2f(x+ballX,y+ballY );
+    //cout<<"Ball X : "<<x+ballX<<"\t Y"<<y+ballY<<endl;
+
     }
     glEnd();
     glPopMatrix(); //Undo the move to the center of the triangle
@@ -52,15 +55,15 @@ void drawScene()
     //Draw background, score bar, top bar and bottom bar
 ////////////////////////////////////////////////////////////////
 
-
     DrawScoreBar();
     DrawTopBar();
+    DrawBottomBar();
     DrawLeftTopBrickBar();
     DrawRightTopBrickBar();
     DrawLeftBottomBrickBar();
     DrawRightBottomBrickBar();
-    DrawBottomBar();
     DrawPlayGround();
+    FullScreenColor();
 
     /* render*/
     glutSwapBuffers();

@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1502652460 source:f:\c++\opengl\aiub graphics project\final project\opengl-bounce-ball-game\source\main.cpp
+1502659398 source:f:\c++\opengl\aiub graphics project\final project\opengl-bounce-ball-game\source\main.cpp
 	"header.h"
 	"PlayGround.hpp"
 	"GlobalVariables.hpp"
@@ -10,7 +10,7 @@
 	"Timer.hpp"
 	"GlutConfig.hpp"
 
-1502651782 f:\c++\opengl\aiub graphics project\final project\opengl-bounce-ball-game\source\header.h
+1502658525 f:\c++\opengl\aiub graphics project\final project\opengl-bounce-ball-game\source\header.h
 	<iostream>
 	<stdio.h>
 	<stdlib.h>
@@ -22,9 +22,9 @@
 	<GL/gl.h>
 	<Gl/glut.h>
 
-1502652548 f:\c++\opengl\aiub graphics project\final project\opengl-bounce-ball-game\source\playground.hpp
+1502663013 f:\c++\opengl\aiub graphics project\final project\opengl-bounce-ball-game\source\playground.hpp
 
-1502652401 f:\c++\opengl\aiub graphics project\final project\opengl-bounce-ball-game\source\globalvariables.hpp
+1502659436 f:\c++\opengl\aiub graphics project\final project\opengl-bounce-ball-game\source\globalvariables.hpp
 
 1502651782 source:f:\c++\opengl\aiub graphics project\final project\opengl-bounce-ball-game\source\scorebar.cpp
 
@@ -32,11 +32,19 @@
 
 1502652527 f:\c++\opengl\aiub graphics project\final project\opengl-bounce-ball-game\source\splashscreen.hpp
 
-1502652372 f:\c++\opengl\aiub graphics project\final project\opengl-bounce-ball-game\source\gamescreenlevel1.hpp
+1502662830 f:\c++\opengl\aiub graphics project\final project\opengl-bounce-ball-game\source\gamescreenlevel1.hpp
 
-1502652427 f:\c++\opengl\aiub graphics project\final project\opengl-bounce-ball-game\source\keyboardevents.hpp
+1502662914 f:\c++\opengl\aiub graphics project\final project\opengl-bounce-ball-game\source\keyboardevents.hpp
 
-1502652490 f:\c++\opengl\aiub graphics project\final project\opengl-bounce-ball-game\source\timer.hpp
+1502661392 f:\c++\opengl\aiub graphics project\final project\opengl-bounce-ball-game\source\timer.hpp
 
 1502652249 f:\c++\opengl\aiub graphics project\final project\opengl-bounce-ball-game\source\glutconfig.hpp
+
+1502655597 f:\c++\opengl\aiub graphics project\final project\opengl-bounce-ball-game\source\stars.hpp
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+	<math.h>
+	<time.h>
+	<GL/glut.h>
 

@@ -14,7 +14,6 @@
 #include<conio.h>
 #include<GL/gl.h>
 #include<Gl/glut.h>
-
 using namespace std;
 
 
