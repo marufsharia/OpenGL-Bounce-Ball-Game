@@ -9,7 +9,16 @@ float ballY=0.0;
 float ball_Radius=0.10;
 float ball_Falling_Speed=0.0;
 bool fullscreen = true;
-
+float random_Num = ((double) rand() / (RAND_MAX)) + 1;
+int WindowHeight = 850;
+int WindowWidth = 900;
+bool gameStart=false;
+bool gameStop=true;
+float leftTopBrickBar;
+char score[]="Score : ";
+//char life[]="Life: 4";
+char *life="Life : ";
+int l=4;
 
 //function
 void drawScene(void);
