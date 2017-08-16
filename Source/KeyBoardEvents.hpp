@@ -8,25 +8,43 @@ void keyPress(int key, int x, int y)
 {
     if(key==GLUT_KEY_RIGHT)
     {
-        if(ballX<1.60)
+        if(ballX<1.40)
         {
-            ballX += 1.0f;
+            ballX += 0.25f;
+            //ballX += 0.80f;
+            //cout<<"postion X :" <<ballX<<endl;
         }
+
+        else if(ballX>=1.40 && ballX<1.90)
+        {
+            ballX += 0.10f;
+            //cout<<"postion X :" <<ballX<<endl;
+        }
+
 
     }
 
     if(key==GLUT_KEY_LEFT)
     {
-        if(ballX>-1.60)
+        if(ballX>-1.40)
         {
-            ballX  -= 1.0f;
+            ballX  -= 0.25f;
+           // ballX  -= 0.80f;
+        }
+        else if(ballX<=-1.40 && ballX>-1.90)
+        {
+            ballX  -= 0.10f;
         }
 
     }
 
-//    if(key==GLUT_KEY_UP)
+//  if(key==GLUT_KEY_UP)
+//     if(!stayOnBar)
 //    ballY  += 0.05f;
+
+
     if(key==GLUT_KEY_DOWN)
+        if(!stayOnBar)
         ballY  -= 0.05f;
 
     if(key==GLUT_KEY_HOME)
@@ -60,8 +78,9 @@ void Keyboard(unsigned char key, int x, int y)
     case 13:             // Enter key
         if(gameStop)
         {
+        intScore=0;
         glutDisplayFunc(drawScene);
-        glutTimerFunc(25, update, 0); //Add a timer
+        glutTimerFunc(50, update, 0); //Add a timer
         PlaySound("resource//bg1.wav", NULL, SND_ASYNC|SND_FILENAME|SND_LOOP);
         gameStop=false;
         gameStart=true;

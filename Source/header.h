@@ -9,6 +9,7 @@
 #include<stdlib.h>
 #include<windows.h>
 #include<time.h>
+#include <iomanip>
 #include<string.h>
 #include<math.h>
 #include<conio.h>

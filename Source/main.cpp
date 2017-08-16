@@ -11,6 +11,7 @@
 #include "KeyBoardEvents.hpp"
 #include "Timer.hpp"
 #include "GlutConfig.hpp"
+#include<sstream>
 
 
 
@@ -21,6 +22,8 @@
 
 int main(int argc, char** argv)
 {
+    cout << std::fixed;
+    cout <<setprecision(2);
     //Initialize GLUT
     glutInit(&argc, argv);
 
@@ -33,12 +36,12 @@ int main(int argc, char** argv)
     initRendering();
     //Set handler functions
     //glutDisplayFunc(drawScene);
-    glutDisplayFunc(drawIntro);
+   glutDisplayFunc(drawIntro);
     glutReshapeFunc(handleResize);
     glutKeyboardFunc (Keyboard);
     glutSpecialFunc(keyPress);
     glutFullScreen();/* Go to full screen */
-    glutTimerFunc(25, update, 0); //Add a timer
+    glutTimerFunc(60, update, 0); //Add a timer
     glutMainLoop();
     return 0;
 }

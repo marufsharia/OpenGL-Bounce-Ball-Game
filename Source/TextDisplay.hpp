@@ -15,7 +15,7 @@ GLUT_BITMAP_HELVETICA_18  =>7
 
 
 void *font = GLUT_BITMAP_TIMES_ROMAN_24;
-void PrintText(float x, float y,int s, char *string)
+void PrintText(float x, float y,int s, char *str)
 {
     int len, i;
     if(s==1)
@@ -48,9 +48,9 @@ void PrintText(float x, float y,int s, char *string)
         font = GLUT_BITMAP_HELVETICA_18; //7
     }
     glRasterPos2f(x, y);
-    len = (int) strlen(string);
+    len = (int) strlen(str);
     for (i = 0; i < len; i++)
     {
-        glutBitmapCharacter(font, string[i]);
+        glutBitmapCharacter(font, str[i]);
     }
 }

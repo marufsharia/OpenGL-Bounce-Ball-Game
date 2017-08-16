@@ -124,12 +124,15 @@ void drawIntro()
     glPushMatrix(); //Save the current state of transformations
     glTranslatef(0.0, 0.00, -5.0); //Move to the center of the triangle
     //glRotatef(_angle, 0.0, 0.0, 1.0); //Rotate about the the vector (1, 2, 3)
-    glColor3ub(rand()%254+1, rand()%254+1, rand()%254+1);
+    glColor3ub(rand()%254+1, rand()%254+1, 0.5);
+    PrintText(-1.40, 0.95, 4,"~{0_0}~  SAVE THE BALL  ~{0_0}~");
+    glColor3ub(rand()%254+1, rand()%254+1,  rand()%254+1);
+    PrintText(-1.90, 0.75, 4,"==================================");
+    glColor3ub(0.50, rand()%254+1, rand()%254+1);
     PrintText(-1.40, 0.25, 4,"=>  Press Enter To Start  <="); //take 4 parameter x,y,font-type (1-7),message
-    PrintText(-1.40, -0.75, 4,"=>  Press ESC To Exit  <=");//take 4 parameter x,y,font-type (1-7),message
+     glColor3ub(rand()%254+1, 0.50, rand()%254+1);
+    PrintText(-1.40, -0.25, 4,"=>  Press ESC To Exit  <=");//take 4 parameter x,y,font-type (1-7),message
     glPopMatrix(); //Undo the move to the center of the triangle
-
-
 
     //Bottom left circle
     glPushMatrix(); //Save the current state of transformations
