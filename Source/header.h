@@ -15,6 +15,7 @@
 #include<conio.h>
 #include<GL/gl.h>
 #include<Gl/glut.h>
+#include<sstream>
 using namespace std;
 
 

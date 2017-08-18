@@ -79,6 +79,7 @@ void Keyboard(unsigned char key, int x, int y)
         if(gameStop)
         {
         intScore=0;
+        sc=0.0;
         glutDisplayFunc(drawScene);
         glutTimerFunc(50, update, 0); //Add a timer
         PlaySound("resource//bg1.wav", NULL, SND_ASYNC|SND_FILENAME|SND_LOOP);

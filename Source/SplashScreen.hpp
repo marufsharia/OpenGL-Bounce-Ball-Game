@@ -130,8 +130,24 @@ void drawIntro()
     PrintText(-1.90, 0.75, 4,"==================================");
     glColor3ub(0.50, rand()%254+1, rand()%254+1);
     PrintText(-1.40, 0.25, 4,"=>  Press Enter To Start  <="); //take 4 parameter x,y,font-type (1-7),message
-     glColor3ub(rand()%254+1, 0.50, rand()%254+1);
+    glColor3ub(rand()%254+1, 0.50, rand()%254+1);
     PrintText(-1.40, -0.25, 4,"=>  Press ESC To Exit  <=");//take 4 parameter x,y,font-type (1-7),message
+    glColor3ub(rand()%254+1, rand()%254+1,  rand()%254+1);
+    PrintText(-1.90, -0.75, 4,"==================================");
+    if(totalScore>0)
+    {
+        glColor3ub(150, 1.0, rand()%254+1);
+
+        char tscore[100];
+        stringstream tc;
+       tc << totalScore;
+        tstr="Your Score Is : ";
+        tstr += tc.str();
+        //cout<<"score : "<<(int)sc<<endl;
+            strcpy(tscore, tstr.c_str());
+            PrintText(-0.80, -0.95, 4,tscore );
+        //cout<<"Your Score : "<<totalScore<<endl;
+    }
     glPopMatrix(); //Undo the move to the center of the triangle
 
     //Bottom left circle

@@ -22,7 +22,7 @@ void drawScene()
     //glColor3ub(rand()%254+1, rand()%254+1, rand()%254+1);
     glColor3f(1.0,0.0,0.0);
     glTranslatef(ballX, ballY, 1.0);  //Ymax=1.77  Ymin=-2.22
-    glutSolidSphere(0.10,30,30);
+    glutSolidSphere(0.05,30,30);
     cureentBallX=ballX;
     cureentBallY=ballY;
    // cout<<"Ball  Y "<<ballY<<endl;
@@ -35,7 +35,7 @@ void drawScene()
 	{
 		float pi=3.1416;
 		float A=(i*2*pi)/100;
-		float r=0.11;
+		float r=0.06;
 		float x = r * cos(A);
 		float y = r * sin(A);
 		glVertex2f(x,y );

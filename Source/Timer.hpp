@@ -1,12 +1,12 @@
 /***************************************************************
 //Update angle,speed and other stuff
 ****************************************************************/
-#include<sstream>
+
 
 void ScoreCheck()
 {
 
-     intScore=0;
+
     if(l==3)
     {
         life[7]='3';
@@ -25,8 +25,8 @@ void ScoreCheck()
     else if (l<1)
     {
         updateTime=60;
-        intScore=0;
-        sc=0.0;
+        //intScore=0;
+        //sc=0.0;
         l=4;
         life[7]='4';
         gameStop=true;
@@ -115,18 +115,22 @@ void update(int value)
         {
 
             // cout<<"enimy hit"<<endl;
+             totalScore+=intScore;
             l--;
+            sc=0.0;
+             intScore=0;
+             updateTime=50;
             ScoreCheck();
             PlaySound("resource//collide.wav", NULL, SND_ASYNC|SND_FILENAME);
             ballY=1.77;
-            EnimyFireBar1=0.0;
+            EnimyFireBar1=-10.0;
             Sleep(300);
             PlaySound("resource//bg1.wav", NULL, SND_ASYNC|SND_FILENAME|SND_LOOP);
         }
 
 
 ////////Food ////////////////////////
-        if(((cureentBallX>=-0.05) && (cureentBallX<0.35))  && (((-0.90+FoodLifeBar1)  == (ballY       +0.15f)) || ( (-0.90+FoodLifeBar1) <= (ballY+0.15f) && (-0.90+FoodLifeBar1) >= ballY )))
+        if(((cureentBallX>=-0.05) && (cureentBallX<0.35))  && (((-0.60+FoodLifeBar1)  == (ballY       +0.15f)) || ( (-0.60+FoodLifeBar1) <= (ballY+0.15f) && (-0.60+FoodLifeBar1) >= ballY )))
 
         {
 
@@ -161,10 +165,13 @@ void update(int value)
 
         if(ballY>1.80)
         {
-
+             totalScore+=intScore;
             l--;
+            sc=0.0;
+            intScore=0;
+            updateTime=50;
             ScoreCheck();
-            //sc=0;
+
 
             // cout<<"game Over hit Top bar"<<endl;
             PlaySound("resource//collide.wav", NULL, SND_ASYNC|SND_FILENAME);
@@ -176,7 +183,11 @@ void update(int value)
 
         if(ballY<-2.22f)
         {
+            totalScore+=intScore;
             l--;
+            sc=0.0;
+            intScore=0;
+            updateTime=50;
             ScoreCheck();
             //sc=0;
 

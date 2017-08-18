@@ -6,42 +6,13 @@ float LeftBrickBarY1=0.0;
 float LeftBrickBarY2=0.0;
 float RightBrickBarY1=0.0;
 float RightBrickBarY2=0.0;
-float EnimyFireBar1=0.0;
-float FoodLifeBar1=0.0;
-int intScore=0;
+
 
 void DrawPlayGround()
 {
     glPushMatrix();
     glTranslatef(0.00, -0.20, 1.0);
-        if(intScore>50 && intScore <100)
-        {
-            glColor4f(0.40,1.0,1.0,0.80);
-        }
-        else if( intScore >100 &&intScore <150)
-        {
-             glColor4f(1.0,1.0,0.80,0.80);
-        }
-        else if( intScore >150 && intScore <175)
-        {
-             glColor4f(1.0,1.0,0.20,0.80);
-        }
-        else if( intScore >175 && intScore <200)
-        {
-            glColor4f(1.0,1.0,0.00,0.80);
-        }
-        else if( intScore >200 && intScore <250)
-        {
-             glColor4f(0.0,1.0,1.0,0.08);
-        }
-        else if( intScore >250 )
-        {
-             glColor3ub(rand()%254+1, rand()%254+1, 1.0);
-        }
-        else
-        {
-              glColor4f(1.0,1.0,1.0,0.80);
-        }
+    glColor4f(1.0,1.0,1.0,0.08);
     glBegin(GL_POLYGON);
     glVertex3f(-2.0, -3.0, 0.0);
     glVertex3f(2.0, -3.0, 0.0);
@@ -256,67 +227,6 @@ void DrawRightBottomBrickBar()
     glPopMatrix();
 
 }
-
-//Enemy bar 1
-void EnimyBar1()
-{
-    glPushMatrix();
-    glTranslatef(0.00, EnimyFireBar1, 1.0);
-
-    glColor3ub(rand()%254+1, rand()%254+1, rand()%254+1);
-    glBegin(GL_POLYGON);
-    glVertex3f(-0.80, 0.90, 0.0);
-    glVertex3f(0.60, 0.90, 0.0);
-    glVertex3f(0.60, 0.70, 0.0);
-    glVertex3f(-0.80,  0.70, 0.0);
-    glEnd();
-    glColor4f(0.40,0.0,0.0,0.10);
-    glBegin(GL_POLYGON);
-    glVertex3f(-0.82, 0.92, 0.0);
-    glVertex3f(0.62, 0.92, 0.0);
-    glVertex3f(0.62, 0.68, 0.0);
-    glVertex3f(-0.82,  0.68, 0.0);
-    glEnd();
-
-    glPopMatrix();
-}
-
-//Food bar 1
-void FoodBar1()
-{
-    glPushMatrix();
-    glTranslatef(0.00, FoodLifeBar1, 1.0);
-
-    glColor3f(0.0, 1.0,0.0);
-    glBegin(GL_POLYGON);
-    glVertex3f(0.04, -0.90, 0.0);
-    glVertex3f(0.20, -0.90, 0.0);
-    glVertex3f(0.20, -0.70, 0.0);
-    glVertex3f(0.04,  -0.70, 0.0);
-    glEnd();
-    glColor4f(1.0,1.0,0.0,0.10);
-    glBegin(GL_POLYGON);
-    glVertex3f(0.00, -0.92, 0.0);
-    glVertex3f(0.24, -0.92, 0.0);
-    glVertex3f(0.24, -0.68, 0.0);
-    glVertex3f(0.00,  -0.68, 0.0);
-    glEnd();
-    glPopMatrix();
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 //fullscreen color

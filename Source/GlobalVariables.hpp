@@ -20,8 +20,10 @@ char score[100];
 char life[] = "Life : 4";
 int l=4;
 static float sc=0;
-int intScore=0;
+//int intScore=0;
 string str;
+string tstr;
+int totalScore=0;
 
 bool stayOnBar=false;
 
